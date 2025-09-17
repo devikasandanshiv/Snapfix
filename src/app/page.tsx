@@ -1,103 +1,77 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="">
+      <div className="section-1 bg-[#f3f9fd] h-screen w-screen relative min-h-[200vh]">
+        <nav className="z-2 relative bg-transparent h-[18vh] w-[100%] flex justify-between ">
+          <img src="/Logo.png" className=" h-[16vh] w-[45vh] pt-4 pl-4" />
+          <div className="flex items-center w-[60vh] ml-5 justify-between">
+            <Link href="/"><h4 className="cursor-pointer">Home</h4></Link>
+            <Link href="/issues"><h4 className="cursor-pointer">Issues</h4></Link>
+            <Link href="/report"><h4 className="cursor-pointer">Report</h4></Link>
+          </div>
+          <div>
+            <button className="border-2 w-22 h-10 m-8 font-semibold relative border-[#8a8a8a89] rounded-full">Login</button>
+          </div>
+        </nav>
+        <div className="blur-[18px] absolute h-[22vw] w-[18vw] left-[-5vw] top-[-20vh] bg-[#d0d3e4] rounded-[50%] top-[0vw] animate-[bounce_5s_ease-in-out_infinite]">
+          <div className="animate-[bounce_5s_ease-in-out_infinite] absolute bg-[#b5b5cf] h-[12vw] w-[20vw] left-[5vw] rounded-r-[40%] rounded-l-[40%]"></div>
+          <div className="absolute h-[12vw] w-[12vw] bg-[#c6c9df] left-[0vh] top-[0vh] rounded-r-[40%]"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className=" absolute bg-[#c6c9df] animate-[bounce_5s_ease-in-out_infinite] h-[12vw] w-[15vw] top-[28vh] rounded-full blur-[18px] left-[100vh] "></div>
+        <div className="absolute bg-[#c6c9df] h-[13vw] w-[13vw] right-[-3vh] top-[7vh] rounded-l-[50%] blur-[18px] animate-[bounce_5s_ease-in-out_infinite]"></div>
+       
+        <div className="absolute text-[10rem] top-[16vh] z-1 font-semibold left-[50vh]">SNAP FIX</div>
+
+        <div className="absolute top-[40vh]">
+          <img src="/marines.jpeg" className=" w-[90vw] pl-30 h-[150vh]" />
+        </div>
+        
+      </div>
+      <div className="section-2 bg-[#f3f9fd] h-screen">
+        <div className="z-1 text-[8vh] relative left-[20vh]">
+          <div className="font-bold">HOW SNAP FIX</div>
+          <div>WORKS?</div>
+        </div>
+        <div className="relative left-[10vh] bg-[#e3e7ce] w-[90vw] h-[66vh] flex flex-col items-start justify-center px-[12vh] space-y-8 rounded-[10vh]">
+
+            <div className="relative bg-[#a89e1a] h-[12vh] w-[60vh] rounded-full flex items-center pl-[12vh] transition-all duration-300 ease-in-out hover:scale-105">
+              <div className="h-[9vh] w-[9vh] bg-[#413c17] rounded-full absolute top-[1.5vh] left-[2vh] flex items-center justify-center">
+                <h4 className="text-white font-bold text-[4vh]">1</h4>
+              </div>
+                <h4 className="text-[4vh] text-white font-semibold ml-5">Snap a photo</h4>
+            </div>
+
+            <div className="relative bg-[#a89e1a] h-[12vh] w-[60vh] rounded-full flex items-center pl-[12vh] transition-all duration-300 ease-in-out hover:scale-105">
+               <div className="absolute left-[2vh] h-[9vh] w-[9vh] bg-[#413c17] rounded-full flex items-center justify-center">
+                <h4 className="text-white font-bold text-[4vh]">2</h4>
+              </div>
+                <h4 className="text-white font-semibold text-[4vh] ml-5">Select location</h4>
+            </div>
+
+            <div className="relative bg-[#a89e1a] h-[12vh] w-[60vh] rounded-full flex items-center pl-[12vh] transition-all duration-300 ease-in-out hover:scale-105">
+              <div className="absolute left-[2vh] h-[9vh] w-[9vh] bg-[#413c17] rounded-full flex items-center justify-center">
+                <h4 className="text-white font-bold text-[4vh]">3</h4>
+              </div>
+                <h4 className="text-white font-semibold text-[4vh] ml-5">Upload</h4>
+            </div>
+        </div>
+        
+        <div className="h-[20vh] w-[100vh] relative left-[51vw] top-[-91vh]">
+            <img src="holding_phone-removebg-preview.png" className="absolute" />
+            <div>
+              <h4 className="relative top-[19vh] left-[34vh]">SNAP FIX</h4>
+              <div className="bg-white h-[9vh] w-[25vh] absolute top-[25vh] left-[33vh]"></div>
+              <div className="bg-white h-[9vh] w-[25vh] absolute top-[37vh] left-[33vh]"></div>
+              <div className="bg-white h-[9vh] w-[25vh] absolute top-[49vh] left-[33vh]"></div>
+              <button className="bg-black absolute h-[6vh] w-[25vh] top-[61vh] left-[33vh] rounded-full text-white">Report</button>
+            </div>
+        </div>
+
+        
+
+      </div>
+    </main>
   );
 }
