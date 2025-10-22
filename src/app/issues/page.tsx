@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link";
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -126,10 +127,9 @@ export default function IssuesPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                <div className=" rounded-lg flex items-center justify-center"><img src="/Logo.png" className="h-[16vh] w-[45vh] " />
                   <MapPin className="w-5 h-5 text-primary-foreground" />
                 </div>
-                <h1 className="text-2xl font-bold text-foreground">SNAP FIX</h1>
               </div>
               <Badge variant="secondary" className="text-xs">
                 Community Reporting
@@ -174,10 +174,13 @@ export default function IssuesPage() {
                 </Select>
                 <Dialog open={showReportForm} onOpenChange={setShowReportForm}>
                   <DialogTrigger asChild>
-                    <Button className="whitespace-nowrap">
-                      <Plus className="w-4 h-4 mr-2" />
-                      Report Issue
-                    </Button>
+                    
+                      <Link href="/report">
+                       <Button className="whitespace-nowrap">
+                       Report Issue
+                       </Button>
+                      </Link>
+                      
                   </DialogTrigger>
                   <DialogContent className="max-w-md">
                     <DialogHeader>
@@ -312,3 +315,4 @@ export default function IssuesPage() {
     </div>
   )
 }
+

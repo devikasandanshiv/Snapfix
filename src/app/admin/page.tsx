@@ -582,15 +582,15 @@ export default function Page() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center shadow-lg">
-                  <Settings className="w-5 h-5 text-white" />
+                <div className="w-15 h-15  flex items-center justify-center">
+                 <img src="/logo-new.png" />
                 </div>
                 <div>
                   <h1 className="text-3xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 dark:from-slate-200 dark:to-slate-400 bg-clip-text text-transparent">
                     SnapFix Admin
                   </h1>
                   <p className="text-slate-600 dark:text-slate-400 text-sm font-medium">
-                    Municipal Infrastructure Management
+                    Civic Infrastructure Management
                   </p>
                 </div>
               </div>

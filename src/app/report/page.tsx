@@ -102,11 +102,11 @@ export default function SnapFixReport() {
 
   return (
     <main>
-      <div className="section1 min-h-[135vh] bg-slate-100 p-6 relative">
+      <div className="section1 min-h-[135vh] bg-[#fffcf8] p-6 relative">
         {/* Navbar */}
-        <nav className="h-[13vh] w-full flex items-center bg-transparent z-20">
+        <nav className="text-[1.6rem] text-gray-700 font-semibold w-full flex items-center bg-transparent z-20">
           <img src="/Logo.png" alt="" className="w-[54vh] h-[16vh] mr-[40vh]" />
-          <div className="flex justify-between w-[45vh] mr-[65vh] text-1xl">
+          <div className="flex justify-between w-[80vw] mr-[65vh] text-1xl">
             <Link href="/"><h4 className="cursor-pointer">Home</h4></Link>
             <Link href="/issues"><h4 className="cursor-pointer">Issues</h4></Link>
             <Link href="/report"><h4 className="cursor-pointer">Report</h4></Link>
@@ -120,12 +120,12 @@ export default function SnapFixReport() {
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg w-[90vh] h-[107vh]">
             {/* Title */}
             <div className="mb-6">
-              <label className="block text-gray-700 font-medium mb-3">Title</label>
+              <label className="block text-gray-700 font-semibold mb-3 text-[1.4rem]">Title</label>
               <input
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full px-4 py-3 bg-purple-50 border-2 border-purple-200 rounded-2xl focus:outline-none focus:border-purple-300 transition-colors"
+                className="w-full px-4 py-3 rounded-2xl bg-[#e8f9f0] border-2 border-[#b9e6c9] focus:outline-none focus:border-[#96caa8] transition-colors"
               />
             </div>
 
@@ -138,8 +138,8 @@ export default function SnapFixReport() {
                     onClick={() => setSelectedIssueType(type.id)}
                     className={`flex flex-col items-center gap-2 p-4 rounded-2xl transition-all ${
                       selectedIssueType === type.id
-                        ? "bg-purple-200 text-purple-700"
-                        : "bg-purple-100 text-purple-600 hover:bg-purple-150"
+                        ? "bg-[#e8f9f0] text-[#6fbd8c] border-[#6fbd8c]"
+                        : "bg-[#f1fcf6] text-[#88cfa2] hover:bg-[#bfeccd] border border-[#6fbd8c]"
                     }`}
                   >
                     <type.icon className="w-8 h-8" />
@@ -151,7 +151,7 @@ export default function SnapFixReport() {
 
             {/* Upload Image */}
             <div className="mb-4">
-              <label className="flex items-center gap-3 px-6 py-3 bg-purple-200 text-purple-700 rounded-2xl hover:bg-purple-300 transition-colors font-medium cursor-pointer">
+              <label className="flex items-center gap-3 px-6 py-3 bg-[#cceeff] hover:bg-[#b3e0ff] text-[#4a6b89] rounded-2xl transition-colors font-medium cursor-pointer">
                 <span className="text-lg">📷</span>
                 {image ? image.name : "Upload image"}
                 <input
@@ -169,12 +169,12 @@ export default function SnapFixReport() {
                 type="text"
                 value={pincode}
                 onChange={(e) => setPincode(e.target.value)}
-                className="flex-1 px-4 py-3 bg-purple-50 border-2 border-purple-200 rounded-2xl focus:outline-none"
+                className="flex-1 px-4 py-3 bg-[#e8f9f0] border-2 border-[#b9e6c9] focus:border-[#96caa8] rounded-2xl focus:outline-none"
                 placeholder="Enter pincode"
               />
               <button
                 onClick={handlePincodeSearch}
-                className="px-6 py-3 bg-purple-300 rounded-2xl text-white font-medium hover:bg-purple-400 transition-colors"
+                className="px-6 py-3 bg-[#cceeff] hover:bg-[#b3e0ff] rounded-2xl text-[#4a6b89] font-medium  transition-colors"
               >
                 Go
               </button>
@@ -183,31 +183,31 @@ export default function SnapFixReport() {
             {/* Latitude & Longitude */}
             <div className="mb-6 flex gap-4">
               <div className="flex-1">
-                <label className="block text-gray-700 font-medium mb-2">
+                <label className="block text-gray-700 mb-2 text-[1.3rem] font-semibold">
                   Latitude
                 </label>
                 <input
                   type="text"
                   value={latitude}
                   onChange={(e) => setLatitude(e.target.value)}
-                  className="w-full px-4 py-3 bg-purple-50 border-2 border-purple-200 rounded-2xl focus:outline-none"
+                  className="w-full px-4 py-3 bg-[#e8f9f0] border-2 border-[#b9e6c9] focus:border-[#96caa8] rounded-2xl focus:outline-none"
                 />
               </div>
               <div className="flex-1">
-                <label className="block text-gray-700 font-medium mb-2">
+                <label className="block text-gray-700 mb-2 text-[1.3rem] font-semibold">
                   Longitude
                 </label>
                 <input
                   type="text"
                   value={longitude}
                   onChange={(e) => setLongitude(e.target.value)}
-                  className="w-full px-4 py-3 bg-purple-50 border-2 border-purple-200 rounded-2xl focus:outline-none"
+                  className="w-full px-4 py-3 bg-[#e8f9f0] border-2 border-[#b9e6c9] focus:border-[#96caa8] rounded-2xl focus:outline-none"
                 />
               </div>
             </div>
 
             {/* Submit */}
-            <button className="w-full py-4 bg-gradient-to-r from-purple-300 to-pink-200 text-white font-semibold rounded-2xl hover:from-purple-400 hover:to-pink-300 transition-all shadow-lg">
+            <button className="bg-gradient-to-r from-[#7ddcff] via-[#8de8d8] to-[#6edfbf] hover:from-[#5dc7f2] hover:via-[#73dec7] hover:to-[#58cfae] transition-all duration-300 text-white font-semibold py-3 px-6 rounded-2xl shadow-md w-full py-4">
               Submit
             </button>
           </div>
